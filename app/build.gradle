@@ -1,0 +1,32 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'moe.henry_zhr.telegram_no_custom_font'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "moe.henry_zhr.telegram_no_custom_font"
+        minSdk 19
+        targetSdk 33
+        versionCode 1
+        versionName "1"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compileOnly 'de.robv.android.xposed:api:82'
+}
